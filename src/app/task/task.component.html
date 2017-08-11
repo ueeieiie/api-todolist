@@ -1,0 +1,15 @@
+<input type="checkbox" 
+    [checked]="taskData.isCompleted" 
+    (change)="setComplete(index)">
+
+<div [hidden]="editMode" [ngClass]="{completed: taskData.isCompleted == true}">
+  {{taskData.line}}
+</div>
+
+<div [hidden]="!editMode">
+  <input type="text" value="{{taskData.line}}" #editedTask>
+  <button (click)="saveEditedTask(index, editedTask)">save</button>
+</div>
+
+<a href="#" (click)="setEditMode()"> edit </a>
+<a href="#" (click)="removeTask(index)"> X</a>
