@@ -22,8 +22,6 @@ export class DataService {
   }
 
   add(task){
-    // console.log('DataService added:', task);
-
     return new Promise( (res, rej) => {
       setTimeout( () => {
         this._list.push(task);
@@ -33,8 +31,6 @@ export class DataService {
   }
 
   remove(id){
-    // console.log('DataService removed:', this._list[id]);
-
     return new Promise( (res, rej) => {
       setTimeout( () => {
         this._list.splice(id, 1);
@@ -45,8 +41,6 @@ export class DataService {
   }
 
   edit(id, editedTask){
-    // console.log('DataService this task:', this._list[id].line, 'was changed to ', editedTask);
-
     return new Promise( (res, rej) => {
       setTimeout( () => {
         this._list[id].line = editedTask;

@@ -16,16 +16,12 @@ export class ListComponent implements OnInit {
   }
 
   onListChangeHandler(){
-    console.log('working')
     this.getList();
   }
 
   getList(){
-
     this.dataService.get()
       .then( data => {
-        console.log('data:', data);
-
         this._list = data;
       })
   }
