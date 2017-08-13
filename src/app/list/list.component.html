@@ -1,9 +1,0 @@
-<new-task (onAddNewTaskHandler)="onListChangeHandler()"></new-task>
-
-<div>
-  <ul>
-    <li *ngFor="let task of _list; let i = index">
-      <task [taskData]="task" [index]="i" (onTaskChangeHandler)="onListChangeHandler()"></task>
-    </li>
-  </ul>
-</div>

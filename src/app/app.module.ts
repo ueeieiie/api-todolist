@@ -1,23 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 // Services
-import { DataService } from './data.service';
+import { DataService } from './services/DataService/data.service'
 
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
-import { NewTaskComponent } from './new-task/new-task.component';
-import { ListComponent } from './list/list.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { ToDoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
-    NewTaskComponent,
-    ListComponent
+    AddTaskComponent,
+    ToDoListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
