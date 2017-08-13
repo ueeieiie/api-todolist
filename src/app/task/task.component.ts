@@ -17,14 +17,14 @@ export class TaskComponent {
   constructor(private dataService: DataService) { }
 
   /**
-   * setting edit mode
+   * sets to edit mode
    */
   setEditMode(){
     this.editMode = true;
   }
 
   /**
-   * saving the the task's text
+   * saves the the task's text
    * @param editedTask 
    */
   saveEditedTask(editedTask: HTMLInputElement){
@@ -36,7 +36,7 @@ export class TaskComponent {
   }
 
   /**
-   * removing specific task by index
+   * removes specific task by index
    */
   removeTask(){
     this.dataService.remove(this.index)
